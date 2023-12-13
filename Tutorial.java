@@ -22,6 +22,8 @@ public class Tutorial extends World
         Log log = new Log();
         addObject(log, getWidth()/2, 200);
         
+        Knife knife = new Knife();
+        addObject(knife, getWidth()/2, 450);
         
     }
 }
