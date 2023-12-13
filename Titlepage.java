@@ -21,20 +21,21 @@ public class Titlepage extends World
         titleLabel();
         
         startButton();
+        TutButton(); 
         prepare();
         
         
         
     }
     
-    public void act() {
+    /** public void act() {
         if(Greenfoot.mouseClicked(null)) 
         {
             MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
         }
         
-    }
+    }  **/
     
     private void titleLabel() {
         Label titleLabel = new Label("Knife Throw", 50);
@@ -45,11 +46,19 @@ public class Titlepage extends World
     private void prepare() {
         Label instructions = new Label("Click to begin!", 30);
         addObject(instructions, getWidth()/2, 300);
+        
+        Label tutorial = new Label("Tutorial", 30);
+        addObject(tutorial, getWidth()/2, 370);
     }
     
     private void startButton() {
         StartButton startButton = new StartButton();
         addObject(startButton, getWidth()/2, 300);
         
+    }
+    
+    private void TutButton() {
+        TutButton tutButton = new TutButton();
+        addObject(tutButton, getWidth()/2, 370);
     }
 }
