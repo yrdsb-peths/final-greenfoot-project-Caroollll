@@ -28,25 +28,25 @@ public class Titlepage extends World
         
     }
     
-    /** public void act() {
-        if(Greenfoot.mouseClicked(null)) 
+    /**public void act() {
+        if(Greenfoot.mouseClicked(prepare)) 
         {
-            Greenfoot.setWorld(gameWorld);
+            Greenfoot.setWorld(new MyWorld());
         }
         
     }  **/
     
     private void titleLabel() {
-        Label titleLabel = new Label("Knife Throw", 50);
+        Label titleLabel = new Label("Knife Throw", 60);
         addObject(titleLabel, getWidth()/2, 200);
         
     }
     
     private void prepare() {
-        Label instructions = new Label("Click to begin!", 30);
+        Label instructions = new Label("Start!", 30);
         addObject(instructions, getWidth()/2, 300);
         
-        Label tutorial = new Label("Tutorial", 30);
+        Label tutorial = new Label("Tutorial!", 30);
         addObject(tutorial, getWidth()/2, 370);
     }
     

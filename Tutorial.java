@@ -15,9 +15,13 @@ public class Tutorial extends World
      */
     public Tutorial()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(350, 500, 1); 
         
-        MyWorld tutorialWorld = new MyWorld();
+        //MyWorld tutorialWorld = new MyWorld();
+        
+        Log log = new Log();
+        addObject(log, getWidth()/2, 200);
+        
+        
     }
 }
