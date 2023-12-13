@@ -31,7 +31,6 @@ public class Titlepage extends World
     /** public void act() {
         if(Greenfoot.mouseClicked(null)) 
         {
-            MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
         }
         
