@@ -38,7 +38,7 @@ public class Titlepage extends World
     }  **/
     
     private void titleLabel() {
-        Label titleLabel = new Label("Knife Throw", 60);
+        Label titleLabel = new Label("Beat Tiles", 60);
         addObject(titleLabel, getWidth()/2, 200);
         
     }

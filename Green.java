@@ -14,9 +14,11 @@ public class Green extends Actor
      */
     public void act()
     {
-        // Add your action code here.
         if(isTouching(Gtile.class) && Greenfoot.isKeyDown("f")) {
             removeTouching(Gtile.class);
+            Tutorial tutorial = (Tutorial) getWorld();
+            tutorial.createGtile();
+            tutorial.increaseScore();
         }
     }
     
@@ -25,4 +27,5 @@ public class Green extends Actor
         green.scale(70, 70);
         setImage(green);
     }
+    
 }

@@ -14,7 +14,9 @@ public class Blue extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        if(isTouching(Btile.class) && Greenfoot.isKeyDown("d")) {
+            removeTouching(Btile.class);
+        }
     }
     
     public Blue() {
