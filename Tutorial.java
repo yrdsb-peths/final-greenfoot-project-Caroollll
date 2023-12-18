@@ -15,7 +15,7 @@ public class Tutorial extends World
      */
     public Tutorial()
     {    
-        super(650, 500, 1); 
+        super(650, 500, 1, false); 
         
         //MyWorld tutorialWorld = new MyWorld();
         
@@ -37,5 +37,11 @@ public class Tutorial extends World
         Yellow yellow = new Yellow();
         addObject(yellow, 550, 450);
         
+        createGtile();
+    }
+    
+    public void createGtile() {
+        Gtile gtile = new Gtile();
+        addObject(gtile, 250, 0);
     }
 }

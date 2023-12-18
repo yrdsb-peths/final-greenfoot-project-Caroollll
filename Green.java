@@ -15,6 +15,9 @@ public class Green extends Actor
     public void act()
     {
         // Add your action code here.
+        if(isTouching(Gtile.class) && Greenfoot.isKeyDown("f")) {
+            removeTouching(Gtile.class);
+        }
     }
     
     public Green() {
