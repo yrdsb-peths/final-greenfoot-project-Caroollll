@@ -15,15 +15,27 @@ public class Tutorial extends World
      */
     public Tutorial()
     {    
-        super(350, 500, 1); 
+        super(650, 500, 1); 
         
         //MyWorld tutorialWorld = new MyWorld();
         
-        Log log = new Log();
-        addObject(log, getWidth()/2, 200);
+        //Log log = new Log();
+        //addObject(log, getWidth()/2, 200);
         
-        Knife knife = new Knife();
-        addObject(knife, getWidth()/2, 450);
+        //Knife knife = new Knife();
+        //addObject(knife, getWidth()/2, 450);
+        
+        Blue blue = new Blue();
+        addObject(blue, 100, 450);
+        
+        Green green = new Green();
+        addObject(green, 250, 450);
+        
+        Red red = new Red();
+        addObject(red, 400, 450);
+        
+        Yellow yellow = new Yellow();
+        addObject(yellow, 550, 450);
         
     }
 }

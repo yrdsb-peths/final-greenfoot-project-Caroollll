@@ -9,13 +9,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Knife extends Actor
 {
     /**
-     * Act - do whatever the Knife wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * click mouse to shoot the knife at the log
      */
+    private Actor Log;
     public void act()
     {
         // Add your action code here.
-        
+        if(Greenfoot.mouseClicked(null)) {
+            if(isTouching(Log.class)) {
+                setLocation(Log.getX(), Log.getY());
+            }
+            else {
+                while(getY() >= 300) {
+                    setLocation(getX(), getY() - 20);
+                }
+            }
+        }
     }
      
     public Knife() {
