@@ -17,6 +17,7 @@ public class MainTank extends Actor
         
         checkKeyPressed();
         shoot();
+        loseHP();
     }
     
     public MainTank() {
@@ -45,5 +46,16 @@ public class MainTank extends Actor
             
         }
         
+    }
+    int totalHP = 50;
+    public void loseHP() {
+        //MyWorld world = (MyWorld) getWorld();
+        if(isTouching(Bullet2.class)) {
+            totalHP--; 
+            if(totalHP < 0) {
+                World world = new Gameover();
+                Greenfoot.setWorld(world);
+            }
+        }
     }
 }

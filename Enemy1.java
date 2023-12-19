@@ -22,7 +22,7 @@ public class Enemy1 extends Actor
         
 
         shoot();
-        
+        die();
     }
     
     public Enemy1() {
@@ -37,5 +37,13 @@ public class Enemy1 extends Actor
         MyWorld world = (MyWorld) getWorld();
 
         world.addObject(bullet2,getX()-25,getY());
+    }
+    
+    public void die() {
+        if(isTouching(Bullet.class)) {
+            removeTouching(Enemy1.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createEnemy1();
+        }
     }
 }

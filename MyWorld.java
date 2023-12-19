@@ -26,8 +26,7 @@ public class MyWorld extends World
         MainTank maintank = new MainTank();
         addObject(maintank,50, getHeight()/2);
         
-        Enemy1 enemy1 = new Enemy1();
-        addObject(enemy1, 600, getHeight()/2);
+        createEnemy1();
         
         createGtile();
         
@@ -39,6 +38,12 @@ public class MyWorld extends World
         addObject(gtile, 250, 0);
     }
 
+    public void createEnemy1() {
+        Enemy1 enemy1 = new Enemy1();
+        int x = 600;
+        int y = Greenfoot.getRandomNumber(500);
+        addObject(enemy1, x, y);
+    }
     
     /**
      * increases score 
