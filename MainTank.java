@@ -41,7 +41,7 @@ public class MainTank extends Actor
             Bullet bullet = new Bullet();
             MyWorld world = (MyWorld) getWorld();
             
- 
+            sleepFor(20);
             world.addObject(bullet,getX()+25,getY());
             
         }

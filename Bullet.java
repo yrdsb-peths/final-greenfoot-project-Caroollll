@@ -16,10 +16,16 @@ public class Bullet extends Actor
     {
         setLocation(getX() +5, getY());
         
+        Enemy1 enemy1 = (Enemy1) getOneIntersectingObject(Enemy1.class);
+        if(enemy1 != null) {
+            getWorld().removeObject(enemy1);
+            getWorld().removeObject(this);
+        }
     }
     
     public Bullet() {
         GreenfootImage bullet = new GreenfootImage("images/bullet.png");
         setImage(bullet);
+        
     }
 }

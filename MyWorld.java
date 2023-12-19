@@ -28,15 +28,8 @@ public class MyWorld extends World
         
         createEnemy1();
         
-        createGtile();
-        
     }
     
-    public void createGtile() {
-        Gtile gtile = new Gtile();
-        gtile.setSpeed(level);
-        addObject(gtile, 250, 0);
-    }
 
     public void createEnemy1() {
         Enemy1 enemy1 = new Enemy1();
