@@ -15,9 +15,13 @@ public class Tutorial extends World
      */
     public Tutorial()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(350, 500, 1); 
+        super(650, 500, 1, false); 
         
-        MyWorld tutorialWorld = new MyWorld();
+    
+    }
+ 
+    public void instructions() {
+        Label rules = new Label("Press keys d, f, j, k",60);
+        addObject(rules, getWidth()/2, getHeight()/2); 
     }
 }

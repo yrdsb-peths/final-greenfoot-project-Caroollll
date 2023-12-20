@@ -16,7 +16,7 @@ public class Titlepage extends World
     public Titlepage()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(350, 500, 1); 
+        super(650, 500, 1); 
         
         titleLabel();
         
@@ -24,29 +24,30 @@ public class Titlepage extends World
         TutButton(); 
         prepare();
         
-        
+        TutBackground bg = new TutBackground();
+        addObject(bg, 0, 0);
         
     }
     
-    /** public void act() {
-        if(Greenfoot.mouseClicked(null)) 
+    /**public void act() {
+        if(Greenfoot.mouseClicked(prepare)) 
         {
-            Greenfoot.setWorld(gameWorld);
+            Greenfoot.setWorld(new MyWorld());
         }
         
     }  **/
     
     private void titleLabel() {
-        Label titleLabel = new Label("Knife Throw", 50);
+        Label titleLabel = new Label("Beat Tiles", 60);
         addObject(titleLabel, getWidth()/2, 200);
         
     }
     
     private void prepare() {
-        Label instructions = new Label("Click to begin!", 30);
+        Label instructions = new Label("Start!", 30);
         addObject(instructions, getWidth()/2, 300);
         
-        Label tutorial = new Label("Tutorial", 30);
+        Label tutorial = new Label("Tutorial!", 30);
         addObject(tutorial, getWidth()/2, 370);
     }
     
