@@ -28,6 +28,9 @@ public class MyWorld extends World
         
         createEnemy1();
         
+        Explode explode = new Explode();
+        addObject(explode, 100, 100);
+        
     }
     
 
@@ -36,6 +39,7 @@ public class MyWorld extends World
         int x = 600;
         int y = Greenfoot.getRandomNumber(500);
         addObject(enemy1, x, y);
+        
     }
     
     /**

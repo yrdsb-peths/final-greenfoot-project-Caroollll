@@ -18,6 +18,7 @@ public class Bullet extends Actor
         
         Enemy1 enemy1 = (Enemy1) getOneIntersectingObject(Enemy1.class);
         if(enemy1 != null) {
+            
             getWorld().removeObject(enemy1);
             getWorld().removeObject(this);
         }
