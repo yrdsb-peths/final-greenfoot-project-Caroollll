@@ -18,7 +18,8 @@ public class Explode extends Actor
     public void act()
     {
         // Add your action code here.
-        explosion();
+        if(imageIndex < explosion.length)
+           explosion();
     }
     
     public Explode() {
@@ -31,6 +32,7 @@ public class Explode extends Actor
         
         //initial explosion image
         setImage(explosion[0]); 
+        
     }
     
     int imageIndex = 0;
@@ -41,6 +43,6 @@ public class Explode extends Actor
         }
         animationTimer.mark();
         setImage(explosion[imageIndex]);
-        imageIndex = (imageIndex +1) % explosion.length;
+        imageIndex = (imageIndex +1);
     } 
 }

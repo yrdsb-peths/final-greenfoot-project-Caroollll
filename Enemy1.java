@@ -10,6 +10,8 @@ public class Enemy1 extends Actor
 {
     int mSpeed = 1;
     int sSpeed = 1;
+    
+    int wait;
     /**
      * Act - do whatever the Enemy1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -20,12 +22,16 @@ public class Enemy1 extends Actor
         int y = getY();
         setLocation(x, y);
         
-
-        shoot();
+        if(wait > 0)
+            wait --;
+        
+        if(wait == 0)
+            shoot();
         //die();
     }
 
     public Enemy1() {
+        wait = 50;
         GreenfootImage enemy1 = new GreenfootImage("images/enemy1.png");
         enemy1.scale(55, 30);
         setImage(enemy1);
@@ -35,8 +41,9 @@ public class Enemy1 extends Actor
         
         Bullet2 bullet2 = new Bullet2();
         MyWorld world = (MyWorld) getWorld();
-        sleepFor(20);
+        //sleepFor(20);
         world.addObject(bullet2,getX()-25,getY());
+        wait = 200;
     }
     
     int enemy1HP = 20;

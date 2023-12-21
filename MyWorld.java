@@ -12,6 +12,13 @@ public class MyWorld extends World
     public Label scoreLabel;
     int level = 1;
     
+    
+    public void act() {
+        if(Greenfoot.getRandomNumber(500) < 3) {
+            addObject(new Enemy1(), 600, Greenfoot.getRandomNumber(500));
+        }
+    }
+    
     /**
      * Constructor for objects of class MyWorld.
      * 

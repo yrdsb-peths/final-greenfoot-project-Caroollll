@@ -51,7 +51,8 @@ public class MainTank extends Actor
     public void loseHP() {
         //MyWorld world = (MyWorld) getWorld();
         if(isTouching(Bullet2.class)) {
-            totalHP--; 
+            totalHP--;
+            system.out.println(totalHP);
             if(totalHP < 0) {
                 World world = new Gameover();
                 Greenfoot.setWorld(world);
