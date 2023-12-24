@@ -36,7 +36,7 @@ public class MyWorld extends World
         createEnemy1();
         
         Explode explode = new Explode();
-        addObject(explode, 100, 100);
+        //addObject(explode, 100, 100);
         
     }
     

@@ -52,7 +52,7 @@ public class MainTank extends Actor
         //MyWorld world = (MyWorld) getWorld();
         if(isTouching(Bullet2.class)) {
             totalHP--;
-            system.out.println(totalHP);
+            //system.out.println(totalHP);
             if(totalHP < 0) {
                 World world = new Gameover();
                 Greenfoot.setWorld(world);

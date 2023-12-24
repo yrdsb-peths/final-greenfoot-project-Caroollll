@@ -24,7 +24,7 @@ public class Bullet extends Actor
             getWorld().addObject(exp, getX(),getY());
             //exp.explosion();
             getWorld().removeObject(this);
-            
+            //getWorld().increaseScore();
             
         }
     }
