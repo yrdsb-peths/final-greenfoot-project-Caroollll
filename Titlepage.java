@@ -23,16 +23,16 @@ public class Titlepage extends World
     }
     
     private void titleLabel() {
-        Label titleLabel = new Label("Tank wars", 80);
-        addObject(titleLabel, getWidth()/2, 150);
+        Label titleLabel = new Label("Tank wars", 90);
+        addObject(titleLabel, getWidth()/2, 130);
         
     }
     
     private void prepare() {
         Difficulty difficulty = new Difficulty();
-        addObject(difficulty, 320, 250);
+        addObject(difficulty, 500, 380);
         
         Tutorialbutton tutorialbutton = new Tutorialbutton();
-        addObject(tutorialbutton, getWidth()/2, 360);
+        addObject(tutorialbutton, 500, 440);
     }
 }

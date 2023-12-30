@@ -41,7 +41,7 @@ public class Normalworld extends World
         int y = Greenfoot.getRandomNumber(500);
         addObject(enemy1, x, y);
         
-        Enemy2 enemy2 = new Enemy2();
-        addObject(enemy2, x, y);
+        //Enemy2 enemy2 = new Enemy2();
+        //addObject(enemy2, x, y);
     }
 }
