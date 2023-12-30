@@ -14,13 +14,18 @@ public class Bullet extends Actor
      */
     public void act()
     {
-        setLocation(getX() +5, getY());
+        //setLocation(getX() +5, getY());
+        move(10);
         
         Enemy1 enemy1 = (Enemy1) getOneIntersectingObject(Enemy1.class);
         if(enemy1 != null) {
-            
+            Explode exp = new Explode();
             getWorld().removeObject(enemy1);
+            getWorld().addObject(exp, getX(),getY());
+            //exp.explosion();
             getWorld().removeObject(this);
+            //getWorld().increaseScore();
+            
         }
     }
     
