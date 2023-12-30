@@ -28,6 +28,12 @@ public class Enemy1 extends Actor
         if(wait == 0)
             shoot();
         //die();
+        
+        MyWorld world = (MyWorld) getWorld();
+        if(getX() <= 0) {
+            world.removeObject(this);
+            Greenfoot.setWorld(new Gameover());
+        }
     }
 
     public Enemy1() {

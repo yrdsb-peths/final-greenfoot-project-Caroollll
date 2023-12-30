@@ -15,13 +15,15 @@ public class Tutorial extends World
      */
     public Tutorial()
     {    
-        super(650, 500, 1, false); 
-        
+        super(650, 500, 1); 
+        prepare();
     
     }
  
-    public void instructions() {
+    public void prepare() {
         Label rules = new Label("Press keys d, f, j, k",60);
         addObject(rules, getWidth()/2, getHeight()/2); 
+        Home home = new Home();
+        addObject(home, getWidth()/2, 400);
     }
 }

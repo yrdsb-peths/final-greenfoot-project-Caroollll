@@ -17,6 +17,7 @@ public class MyWorld extends World
         if(Greenfoot.getRandomNumber(500) < 3) {
             addObject(new Enemy1(), 600, Greenfoot.getRandomNumber(500));
         }
+        
     }
     
     /**
