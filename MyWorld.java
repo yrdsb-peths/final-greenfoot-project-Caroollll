@@ -12,12 +12,13 @@ public class MyWorld extends World
     public Label scoreLabel;
     int level = 1;
     
-    
+    /** 
+     * myworld adds an enemy1 everytime a random number is less than 3
+     */
     public void act() {
         if(Greenfoot.getRandomNumber(500) < 3) {
             addObject(new Enemy1(), 600, Greenfoot.getRandomNumber(500));
         }
-        
     }
     
     /**
@@ -41,7 +42,9 @@ public class MyWorld extends World
         
     }
     
-
+    /** 
+     * creates enemy1 and spawns it randomly on the y-axis 
+     */
     public void createEnemy1() {
         Enemy1 enemy1 = new Enemy1();
         int x = 600;

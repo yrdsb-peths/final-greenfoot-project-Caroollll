@@ -42,6 +42,9 @@ public class Bullet extends Actor
         }
     }
     
+    /** 
+     * bullet constructor 
+     */
     public Bullet() {
         GreenfootImage bullet = new GreenfootImage("images/bullet.png");
         setImage(bullet);

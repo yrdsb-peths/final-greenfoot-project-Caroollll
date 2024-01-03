@@ -25,6 +25,10 @@ public class Normalworld extends World
         Explode explode = new Explode();
     }
     
+    /** 
+     * myworld adds an enemy1 everytime a random number is less than 3
+     * myworld adds an enemy2 everytime a random number is less than 2
+     */
     public void act() {
         if(Greenfoot.getRandomNumber(500) < 3) {
             addObject(new Enemy1(), 600, Greenfoot.getRandomNumber(500));
@@ -35,6 +39,9 @@ public class Normalworld extends World
         
     }
     
+    /**
+     * creates enemies and spawns it randomly on the y-axis 
+     */
     private void createEnemies() {
         Enemy1 enemy1 = new Enemy1();
         int x = 600;
