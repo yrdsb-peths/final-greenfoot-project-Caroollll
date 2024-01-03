@@ -8,14 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Difficultypage extends World
 {
-
+    public int difficulty;
     /**
      * Constructor for objects of class Difficultypage.
      * 
      */
     public Difficultypage()
     {    
-        super(650, 500, 1); 
+        super(650, 500, 1);
+        difficulty = 0; 
         prepare();
     }
     

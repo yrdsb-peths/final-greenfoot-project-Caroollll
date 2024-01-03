@@ -8,13 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy1 extends Actor
 {
-    int mSpeed = 1;
-    int sSpeed = 1;
+    int mSpeed = 1; //move speed
+    int sSpeed = 1; //shoot speed
     
     int wait;
     /**
-     * Act - do whatever the Enemy1 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * enemy1 waits until wait is 0, then starts shooting so it doesn't shoot too fast
+     * when enemy1 moves to the left side and behind the main tank, gameover 
      */
     public void act()
     {
@@ -29,13 +29,16 @@ public class Enemy1 extends Actor
             shoot();
         //die();
         
-        MyWorld world = (MyWorld) getWorld();
+        //MyWorld world = (MyWorld) getWorld();
         if(getX() <= 0) {
-            world.removeObject(this);
+            //world.removeObject(this);
+            removeTouching(Enemy1.class);
             Greenfoot.setWorld(new Gameover());
         }
     }
-
+    /** 
+     * enemy1 constructor 
+     */
     public Enemy1() {
         wait = 50;
         GreenfootImage enemy1 = new GreenfootImage("images/enemy1.png");
@@ -43,12 +46,12 @@ public class Enemy1 extends Actor
         setImage(enemy1);
     }
     
+    /**
+     * enemy1 shoots, bullet gets spawned in world
+     */
     public void shoot() {
-        
         Bullet2 bullet2 = new Bullet2();
-        MyWorld world = (MyWorld) getWorld();
-        //sleepFor(20);
-        world.addObject(bullet2,getX()-25,getY());
+        getWorld().addObject(bullet2, getX()-25, getY());
         wait = 200;
     }
     

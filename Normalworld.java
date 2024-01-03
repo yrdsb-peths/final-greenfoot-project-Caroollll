@@ -15,7 +15,7 @@ public class Normalworld extends World
      */
     public Normalworld()
     {    
-        super(650, 500, 1); 
+        super(650, 500, 1, false); 
     
         MainTank maintank = new MainTank();
         addObject(maintank,50, getHeight()/2);
@@ -29,7 +29,7 @@ public class Normalworld extends World
         if(Greenfoot.getRandomNumber(500) < 3) {
             addObject(new Enemy1(), 600, Greenfoot.getRandomNumber(500));
         }
-        if(Greenfoot.getRandomNumber(500) <3) {
+        if(Greenfoot.getRandomNumber(500) <2) {
             addObject(new Enemy2(), 600, Greenfoot.getRandomNumber(500));
         }
         
@@ -41,7 +41,8 @@ public class Normalworld extends World
         int y = Greenfoot.getRandomNumber(500);
         addObject(enemy1, x, y);
         
-        //Enemy2 enemy2 = new Enemy2();
-        //addObject(enemy2, x, y);
+        int z = Greenfoot.getRandomNumber(500);
+        Enemy2 enemy2 = new Enemy2();
+        addObject(enemy2, x, z);
     }
 }
