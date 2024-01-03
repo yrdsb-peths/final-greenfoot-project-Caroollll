@@ -39,17 +39,16 @@ public class MainTank extends Actor
         if(Greenfoot.isKeyDown("space")) {
             
             Bullet bullet = new Bullet();
-            MyWorld world = (MyWorld) getWorld();
+            //MyWorld world = (MyWorld) getWorld();
             
             sleepFor(20);
-            world.addObject(bullet,getX()+25,getY());
+            getWorld().addObject(bullet,getX()+25,getY());
             
         }
         
     }
     int totalHP = 50;
     public void loseHP() {
-        //MyWorld world = (MyWorld) getWorld();
         if(isTouching(Bullet2.class)) {
             totalHP--;
             //system.out.println(totalHP);
