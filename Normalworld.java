@@ -8,7 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Normalworld extends World
 {
-
+    public int score = 0;
+    public Label scoreLabel;
+    
     /**
      * Constructor for objects of class Normalworld.
      * 
@@ -51,5 +53,14 @@ public class Normalworld extends World
         int z = Greenfoot.getRandomNumber(500);
         Enemy2 enemy2 = new Enemy2();
         addObject(enemy2, x, z);
+    }
+    
+    /**
+     * increases score 
+     */
+    public void increaseScore() {
+        score++;
+        scoreLabel.setValue(score);
+        
     }
 }

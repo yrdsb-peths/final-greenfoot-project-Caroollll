@@ -20,7 +20,7 @@ public class Replay extends Actor
         }
         if(Greenfoot.mouseClicked(this)) {
             Greenfoot.delay(2);
-            Greenfoot.setWorld(new MyWorld());
+            Greenfoot.setWorld(new Difficultypage());
         }
     }
 }

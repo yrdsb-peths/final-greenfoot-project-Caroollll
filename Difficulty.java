@@ -19,6 +19,7 @@ public class Difficulty extends Actor
         }
         if(Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new Difficultypage());
+            ((Titlepage) getWorld()).intromusic.stop();
         }
     }
 }

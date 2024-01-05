@@ -55,6 +55,7 @@ public class MainTank extends Actor
     /** 
      * maintank loses HP when it gets hit by the enemy bullets and dies when
      * loses all it's HP.
+     * main tank has 3 lives 
      */
     int totalHP = 50;
     public void loseHP() {

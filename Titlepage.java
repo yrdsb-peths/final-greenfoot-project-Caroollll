@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Titlepage extends World
 {
-
+    GreenfootSound intromusic = new GreenfootSound("intromusic.mp3");
     /**
      * Constructor for objects of class Titlepage.
      * 
@@ -16,23 +16,39 @@ public class Titlepage extends World
     public Titlepage()
     {    
         super(650, 500, 1); 
-        
         titleLabel();
         prepare();
-        
     }
     
+    public void act() {
+        
+        if(Greenfoot.mousePressed(Difficulty.class)) {
+            //intromusic.pause();
+        }
+    }
+    
+    /** 
+     * add all the labels needed in the titlepage
+     */
     private void titleLabel() {
         Label titleLabel = new Label("Tank wars", 90);
         addObject(titleLabel, getWidth()/2, 130);
         
     }
     
+    /** 
+     * prepare the page, add all the buttons needed and start the music 
+     */
     private void prepare() {
         Difficulty difficulty = new Difficulty();
         addObject(difficulty, 500, 380);
         
         Tutorialbutton tutorialbutton = new Tutorialbutton();
         addObject(tutorialbutton, 500, 440);
+        
+        intromusic.setVolume(40);
+        intromusic.play();
+        
+        
     }
 }
