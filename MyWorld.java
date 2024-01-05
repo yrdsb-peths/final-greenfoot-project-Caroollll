@@ -11,13 +11,14 @@ public class MyWorld extends World
     public int score = 0;
     public Label scoreLabel;
     int level = 1;
-    
-    
+    GreenfootSound gamesound1 = new GreenfootSound("gamesound4.mp3");
+    /** 
+     * myworld adds an enemy1 everytime a random number is less than 3
+     */
     public void act() {
         if(Greenfoot.getRandomNumber(500) < 3) {
             addObject(new Enemy1(), 600, Greenfoot.getRandomNumber(500));
         }
-        
     }
     
     /**
@@ -37,11 +38,15 @@ public class MyWorld extends World
         createEnemy1();
         
         Explode explode = new Explode();
-        //addObject(explode, 100, 100);
+        
+        gamesound1.setVolume(40);
+        gamesound1.play();
         
     }
     
-
+    /** 
+     * creates enemy1 and spawns it randomly on the y-axis 
+     */
     public void createEnemy1() {
         Enemy1 enemy1 = new Enemy1();
         int x = 600;
@@ -56,9 +61,7 @@ public class MyWorld extends World
     public void increaseScore() {
         score++;
         scoreLabel.setValue(score);
-        if(score % 5 == 0) {
-            level += 1;
-        }
+        
     }
     
     

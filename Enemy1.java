@@ -29,9 +29,7 @@ public class Enemy1 extends Actor
             shoot();
         //die();
         
-        //MyWorld world = (MyWorld) getWorld();
         if(getX() <= 0) {
-            //world.removeObject(this);
             removeTouching(Enemy1.class);
             Greenfoot.setWorld(new Gameover());
         }
