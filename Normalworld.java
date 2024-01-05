@@ -10,7 +10,7 @@ public class Normalworld extends World
 {
     public int score = 0;
     public Label scoreLabel;
-    
+    GreenfootSound gamesound2 = new GreenfootSound("gamesound3.mp3");
     /**
      * Constructor for objects of class Normalworld.
      * 
@@ -18,13 +18,18 @@ public class Normalworld extends World
     public Normalworld()
     {    
         super(650, 500, 1, false); 
-    
-        MainTank maintank = new MainTank();
-        addObject(maintank,50, getHeight()/2);
+        scoreLabel = new Label(0, 80);
+        addObject(scoreLabel, 50, 50);
+        
+        Maintanknormal maintanknormal = new Maintanknormal();
+        addObject(maintanknormal,50, getHeight()/2);
         
         createEnemies();
         
         Explode explode = new Explode();
+        
+        gamesound2.setVolume(40);
+        gamesound2.play();
     }
     
     /** 

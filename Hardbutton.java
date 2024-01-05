@@ -20,6 +20,7 @@ public class Hardbutton extends Actor
         if(Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new Hardworld());
             ((Difficultypage) getWorld()).difficulty = 3;
+            ((Difficultypage) getWorld()).difficultysound.stop();
         }
     }
 }

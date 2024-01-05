@@ -20,13 +20,6 @@ public class Titlepage extends World
         prepare();
     }
     
-    public void act() {
-        
-        if(Greenfoot.mousePressed(Difficulty.class)) {
-            //intromusic.pause();
-        }
-    }
-    
     /** 
      * add all the labels needed in the titlepage
      */

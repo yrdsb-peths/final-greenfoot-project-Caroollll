@@ -20,6 +20,7 @@ public class Normalbutton extends Actor
         if(Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new Normalworld());
             ((Difficultypage) getWorld()).difficulty = 2;
+            ((Difficultypage) getWorld()).difficultysound.stop();
         }
     }
 }

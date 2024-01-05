@@ -20,6 +20,7 @@ public class Easybutton extends Actor
         if(Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new MyWorld());
             ((Difficultypage) getWorld()).difficulty = 1;
+            ((Difficultypage) getWorld()).difficultysound.stop();
         }
     }
 }

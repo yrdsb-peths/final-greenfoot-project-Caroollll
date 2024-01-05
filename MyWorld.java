@@ -11,7 +11,7 @@ public class MyWorld extends World
     public int score = 0;
     public Label scoreLabel;
     int level = 1;
-    
+    GreenfootSound gamesound1 = new GreenfootSound("gamesound4.mp3");
     /** 
      * myworld adds an enemy1 everytime a random number is less than 3
      */
@@ -38,7 +38,9 @@ public class MyWorld extends World
         createEnemy1();
         
         Explode explode = new Explode();
-        //addObject(explode, 100, 100);
+        
+        gamesound1.setVolume(40);
+        gamesound1.play();
         
     }
     
