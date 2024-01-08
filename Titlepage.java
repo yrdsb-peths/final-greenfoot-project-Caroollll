@@ -42,6 +42,7 @@ public class Titlepage extends World
         intromusic.setVolume(40);
         intromusic.play();
         
-        
+        Sound sound = new Sound();
+        addObject(sound, 50, 450);
     }
 }

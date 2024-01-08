@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Easybutton extends Actor
 {
     /**
-     * Act - do whatever the Easybutton wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * checks if the actor is pressed, and if pressed, change the world
+     * into myworld and stops the sound
+     * button also gets smaller, as if literally getting squished
      */
     public void act()
     {

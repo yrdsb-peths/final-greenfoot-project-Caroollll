@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Difficulty extends Actor
 {
     /**
-     * Act - do whatever the Difficulty wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * checks if the actor is pressed, and if pressed, change the world
+     * into difficultypage and pauses the sound
+     * button also gets smaller, as if literally getting squished
      */
     public void act()
     {
