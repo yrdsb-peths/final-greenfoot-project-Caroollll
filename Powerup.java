@@ -10,17 +10,29 @@ public class Powerup extends Actor
 {
     int wait;
     /**
-     * Act - do whatever the Powerup wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * if maintankhard is intersecting the powerup actor, the maintankhard will 
+     * be removed, and supertankhard will be added
      */
     public void act()
     {
         setLocation(getX() -5, getY());
         Maintankhard maintankhard = (Maintankhard) getOneIntersectingObject(Maintankhard.class);
+        Supertankhard supertankhard = new Supertankhard();
         if(maintankhard != null) {
             getWorld().removeObject(maintankhard);
-            Supertankhard supertankhard = new Supertankhard();
+            //Supertankhard supertankhard = new Supertankhard();
             getWorld().addObject(supertankhard, getX(),getY());
         }
+        
+        /**wait = 600;
+        if(wait > 0)
+            wait --;
+        
+        if(wait == 0)
+            getWorld().removeObject(supertankhard);
+            //Maintankhard maintankhard = new Maintankhard();
+            getWorld().addObject(maintankhard, getX(), getY()); **/
+            
+            
     }
 }

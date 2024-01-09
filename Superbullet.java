@@ -21,27 +21,27 @@ public class Superbullet extends Actor
         Enemy3 enemy3 = (Enemy3) getOneIntersectingObject(Enemy3.class);
         if(enemy1 != null&& getWorld() != null) {
             ((Hardworld) getWorld()).increaseScore();
-            Explode exp = new Explode();
+            Explosions explosions = new Explosions();
             getWorld().removeObject(enemy1);
-            getWorld().addObject(exp, getX(),getY());
+            getWorld().addObject(explosions, getX(),getY());
             //getWorld().removeObject(this);
             //explosion1.play();
         }
         if(enemy2 != null && getWorld() != null) {
-            Explode exp = new Explode();
+            ((Hardworld) getWorld()).increaseScore();
+            Explosions explosions = new Explosions();
             getWorld().removeObject(enemy2);
-            getWorld().addObject(exp, getX(),getY());
+            getWorld().addObject(explosions, getX(),getY());
             //getWorld().removeObject(this);
             //explosion1.play();
-            ((Hardworld) getWorld()).increaseScore();
         }
         if(enemy3 != null && getWorld() != null) {
-            Explode exp = new Explode();
+            ((Hardworld) getWorld()).increaseScore();
+            Explosions explosions = new Explosions();
             getWorld().removeObject(enemy3);
-            getWorld().addObject(exp, getX(),getY());
+            getWorld().addObject(explosions, getX(),getY());
             //getWorld().removeObject(this);
             //explosion1.play();
-            ((Hardworld) getWorld()).increaseScore();
         }
     }
 }

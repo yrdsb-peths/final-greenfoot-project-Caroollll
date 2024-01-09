@@ -19,7 +19,7 @@ public class Supertankhard extends Actor
     }
     
     /** 
-     * maintankhard constructor
+     * supertankhard constructor
      */
     public Supertankhard() {
         GreenfootImage supertankhard = new GreenfootImage("images/supertank.png");
@@ -28,7 +28,7 @@ public class Supertankhard extends Actor
     }
     
     /** 
-     * move maintank up and down by pressing up and down key
+     * move supertank up and down by pressing up and down key
      */
     public void checkKeyPressed() {
         if(Greenfoot.isKeyDown("up")) {
@@ -40,7 +40,7 @@ public class Supertankhard extends Actor
     }
     
     /** 
-     * maintank shoots bullets when space button is pressed
+     * supertank shoots SUPERbullets when space button is pressed
      */
     public void shoot() {
         if(Greenfoot.isKeyDown("space")) {
