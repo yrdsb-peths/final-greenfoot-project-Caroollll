@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Tutorialbutton extends Actor
 {
     /**
-     * Act - do whatever the Tutorialbutton wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * checks if the actor is pressed, and if pressed, change the world
+     * into tutorial and stops the sound
+     * button also gets smaller, as if literally getting squished
      */
     public void act()
     {
@@ -19,6 +20,7 @@ public class Tutorialbutton extends Actor
         }
         if(Greenfoot.mouseClicked(this)) {
             Greenfoot.setWorld(new Tutorial());
+            ((Titlepage) getWorld()).intromusic.stop();
         }
     }
     

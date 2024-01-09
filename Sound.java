@@ -33,8 +33,8 @@ public class Sound extends Actor
             ((Titlepage) getWorld()).intromusic.pause();
         }
         else {
-            GreenfootImage start = new GreenfootImage("images/sound.png");
-            setImage(start);
+            GreenfootImage sound = new GreenfootImage("images/sound.png");
+            setImage(sound);
             ((Titlepage) getWorld()).intromusic.play();
         }
     }

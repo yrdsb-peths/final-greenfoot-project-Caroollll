@@ -25,7 +25,7 @@ public class Hardworld extends World
         addObject(maintankhard,50, getHeight()/2);
         
         createEnemies();
-        
+
         Explode explode = new Explode();
         
         gamesound3.setVolume(40);
@@ -47,6 +47,9 @@ public class Hardworld extends World
         if(Greenfoot.getRandomNumber(500) <1) {
             addObject(new Enemy3(), 600, Greenfoot.getRandomNumber(500));
         }
+        if(Greenfoot.getRandomNumber(500) <5) {
+            addObject(new Powerup(), 600, Greenfoot.getRandomNumber(500));
+        }
     }
     
     /** 
@@ -65,6 +68,13 @@ public class Hardworld extends World
         int a = Greenfoot.getRandomNumber(500);
         Enemy3 enemy3 = new Enemy3();
         addObject(enemy3, x, a);
+    }
+    
+    private void createPowerups() {
+        Powerup powerup = new Powerup();
+        int a = 600;
+        int b = Greenfoot.getRandomNumber(500);
+        addObject(powerup, a, b);
     }
     
     /**
