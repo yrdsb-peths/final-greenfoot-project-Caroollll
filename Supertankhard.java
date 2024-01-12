@@ -8,23 +8,31 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Supertankhard extends Actor
 {
+    private SimpleTimer timer = new SimpleTimer();
     /**
-     * Act - do whatever the Supertankhard wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * supertank moves up and down, and shoots 
+     * when supertank timer is up, maintankhard is added back and supertank is removed
      */
     public void act()
     {
         checkKeyPressed();
         shoot();
+        
+        if(timer.millisElapsed() > 5000) {
+            getWorld().addObject(new Maintankhard(), getX(), getY());
+            getWorld().removeObject(this); 
+        }
     }
     
     /** 
-     * supertankhard constructor
+     * supertankhard constructor, starts supertank timer 
      */
     public Supertankhard() {
         GreenfootImage supertankhard = new GreenfootImage("images/supertank.png");
         supertankhard.scale(90, 80);
         setImage(supertankhard);
+        
+        timer.mark();
     }
     
     /** 

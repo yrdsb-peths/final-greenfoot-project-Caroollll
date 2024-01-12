@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Powerup extends Actor
 {
-    int wait;
     /**
      * if maintankhard is intersecting the powerup actor, the maintankhard will 
      * be removed, and supertankhard will be added
@@ -17,22 +16,11 @@ public class Powerup extends Actor
     {
         setLocation(getX() -5, getY());
         Maintankhard maintankhard = (Maintankhard) getOneIntersectingObject(Maintankhard.class);
-        Supertankhard supertankhard = new Supertankhard();
+        
         if(maintankhard != null) {
             getWorld().removeObject(maintankhard);
-            //Supertankhard supertankhard = new Supertankhard();
-            getWorld().addObject(supertankhard, getX(),getY());
+            getWorld().addObject(new Supertankhard(), 50, getY());
         }
-        
-        /**wait = 600;
-        if(wait > 0)
-            wait --;
-        
-        if(wait == 0)
-            getWorld().removeObject(supertankhard);
-            //Maintankhard maintankhard = new Maintankhard();
-            getWorld().addObject(maintankhard, getX(), getY()); **/
-            
-            
+    
     }
 }
