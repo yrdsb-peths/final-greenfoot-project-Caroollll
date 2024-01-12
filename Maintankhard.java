@@ -17,6 +17,7 @@ public class Maintankhard extends Actor
         checkKeyPressed();
         shoot();
         loseHP();
+    
     }
     
     /** 

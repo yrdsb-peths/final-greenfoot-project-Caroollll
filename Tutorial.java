@@ -21,7 +21,6 @@ public class Tutorial extends World
 
     /**
      * Constructor for objects of class Tutorial.
-     * 2191 2194
      */
     public Tutorial()
     {    
@@ -32,6 +31,9 @@ public class Tutorial extends World
         
         MaintankTutorial maintanktutorial = new MaintankTutorial();
         addObject(maintanktutorial,50, getHeight()/2);
+        
+        Base base = new Base();
+        addObject(base, -10, getHeight()/2);
         
         Enemy1 enemy1 = new Enemy1();
         addObject(enemy1, 600, getHeight()/2);

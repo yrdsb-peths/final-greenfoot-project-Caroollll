@@ -19,7 +19,7 @@ public class MaintankTutorial extends Actor
     
         if(isTouching(Bullet2.class)) {
             Warning warning = new Warning();
-            ((Tutorial) getWorld()).addObject(warning, 300, 300);
+            ((Tutorial) getWorld()).addObject(warning, 325, 300);
         }
     }
     
