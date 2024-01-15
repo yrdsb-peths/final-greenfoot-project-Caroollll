@@ -1,10 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Normalworld here.
+ * The game world of the hard version of tank wars. Spawns 3 different
+ * tanks randomly along the y-axis. Also spawns powerups very rarely 
+ * along the y-axis. When an enemy is shot, the score increases. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol
+ * @01/15/24
  */
 public class Hardworld extends World
 {
@@ -12,7 +14,7 @@ public class Hardworld extends World
     public Label scoreLabel;
     GreenfootSound gamesound3 = new GreenfootSound("gamesound1.mp3");
     /**
-     * Constructor for objects of class Normalworld.
+     * Constructor for objects of class Hardworld.
      * 
      */
     public Hardworld()
@@ -20,6 +22,9 @@ public class Hardworld extends World
         super(650, 500, 1, false); 
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 50, 50);
+        
+        Base base = new Base();
+        addObject(base, -10, getHeight()/2);
         
         Maintankhard maintankhard = new Maintankhard();
         addObject(maintankhard,50, getHeight()/2);
@@ -33,9 +38,10 @@ public class Hardworld extends World
     }
     
     /** 
-     * myworld adds an enemy1 everytime a random number is less than 3
-     * myworld adds an enemy2 everytime a random number is less than 2
-     * myworld adds an enemy3 everytime a random number is less than 1
+     * hardworld adds an enemy1 everytime a random number is less than 3
+     * adds an enemy2 everytime a random number is less than 2
+     * adds an enemy3 everytime a random number is less than 1
+     * adds powerup everytime a random number is less than 1
      */
     public void act() {
         if(Greenfoot.getRandomNumber(500) < 3) {
@@ -47,7 +53,7 @@ public class Hardworld extends World
         if(Greenfoot.getRandomNumber(500) <1) {
             addObject(new Enemy3(), 600, Greenfoot.getRandomNumber(500));
         }
-        if(Greenfoot.getRandomNumber(500) <5) {
+        if(Greenfoot.getRandomNumber(500) <1) {
             addObject(new Powerup(), 600, Greenfoot.getRandomNumber(500));
         }
     }
@@ -70,6 +76,9 @@ public class Hardworld extends World
         addObject(enemy3, x, a);
     }
     
+    /** 
+     * creates powerups and spawns it randomly on the y-axis 
+     */
     private void createPowerups() {
         Powerup powerup = new Powerup();
         int a = 600;

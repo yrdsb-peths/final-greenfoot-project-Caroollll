@@ -1,10 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Normalworld here.
+ * The game world of the normal version of tank wars. Spawns 2 different
+ * tanks randomly along the y-axis. When an enemy is shot, the score
+ * increases. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol
+ * @01/15/24
  */
 public class Normalworld extends World
 {
@@ -21,6 +23,9 @@ public class Normalworld extends World
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 50, 50);
         
+        Base base = new Base();
+        addObject(base, -10, getHeight()/2);
+        
         Maintanknormal maintanknormal = new Maintanknormal();
         addObject(maintanknormal,50, getHeight()/2);
         
@@ -33,8 +38,8 @@ public class Normalworld extends World
     }
     
     /** 
-     * myworld adds an enemy1 everytime a random number is less than 3
-     * myworld adds an enemy2 everytime a random number is less than 2
+     * normalworld adds an enemy1 everytime a random number is less than 3
+     * adds an enemy2 everytime a random number is less than 2
      */
     public void act() {
         if(Greenfoot.getRandomNumber(500) < 3) {

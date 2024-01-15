@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bulletnormal here.
+ * the bullet actor that maintanknormal shoots in normalworld
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol
+ * @01/15/24
  */
 public class Bulletnormal extends Actor
 {
     GreenfootSound explosion1 = new GreenfootSound("explosion1.wav");
     /**
-     * Act - do whatever the Bulletnormal wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * checks if bullethard is touching enemy1 and 2. If touching, 
+     * score increases, explosion animation, and removes enemies
      */
     public void act()
     {

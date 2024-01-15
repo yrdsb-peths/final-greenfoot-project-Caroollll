@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Gameover here.
+ * Displays the gameover actor, also has 2 button actors, when clicked
+ * on either, player will be brought to the page they chose. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol
+ * @01/15/24
  */
 public class Gameover extends World
 {

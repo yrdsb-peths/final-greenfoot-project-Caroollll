@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Titlepage here.
+ * adds all the assets the page needs, buttons, labels, and sound
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol
+ * @01/15/24
  */
 public class Titlepage extends World
 {
@@ -16,23 +16,17 @@ public class Titlepage extends World
     public Titlepage()
     {    
         super(650, 500, 1); 
-        titleLabel();
         prepare();
     }
     
     /** 
-     * add all the labels needed in the titlepage
+     * prepare the page, add the labels, all the buttons needed and 
+     * start the music 
      */
-    private void titleLabel() {
+    private void prepare() {
         Label titleLabel = new Label("Tank wars", 90);
         addObject(titleLabel, getWidth()/2, 130);
         
-    }
-    
-    /** 
-     * prepare the page, add all the buttons needed and start the music 
-     */
-    private void prepare() {
         Difficulty difficulty = new Difficulty();
         addObject(difficulty, 500, 380);
         

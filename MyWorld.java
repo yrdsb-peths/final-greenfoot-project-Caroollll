@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * The game world of the easy version of tank wars. Spawns 1 tank
+ * randomly along the y-axis. When an enemy is shot, the score increases. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol
+ * @01/15/24
  */
 public class MyWorld extends World
 {
@@ -31,6 +32,9 @@ public class MyWorld extends World
         
         scoreLabel = new Label(0, 80);
         addObject(scoreLabel, 50, 50);
+        
+        Base base = new Base();
+        addObject(base, -10, getHeight()/2);
         
         MainTank maintank = new MainTank();
         addObject(maintank,50, getHeight()/2);
