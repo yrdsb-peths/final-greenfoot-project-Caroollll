@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Explosions here.
+ * animation of the explosion used for supertank during the powerup
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li 
+ * @01/15/24
  */
 public class Explosions extends Actor
 {
@@ -12,8 +12,7 @@ public class Explosions extends Actor
     SimpleTimer animationTimer2 = new SimpleTimer();
     GreenfootImage explode2 = new GreenfootImage("images/explosions/explosions0.png");
     /**
-     * Act - do whatever the Explosions wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * keep changing the animation until it reaches the end
      */
     public void act()
     {
@@ -21,6 +20,9 @@ public class Explosions extends Actor
             explosion2();
     }
     
+    /**
+     * constructor for explosions
+     */
     public Explosions() {
         for(int i =0; i <explosion2.length; i++) {
             explosion2[i] = new GreenfootImage("images/explosions/explosions" + i + ".png");

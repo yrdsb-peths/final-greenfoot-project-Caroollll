@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemy1TUTORIAL here.
+ * the acts the same as enemy1 but the game over world will not be switched
+ * when the enemy reaches the end of the screen.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li 
+ * @01/15/24
  */
 public class Enemy1TUTORIAL extends Actor
 {

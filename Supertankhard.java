@@ -1,10 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Supertankhard here.
+ * supertank does the same things as maintank hard, but supertank does not
+ * have any HP, meaning it cannot die when in this state. Supertank can also
+ * shoot super bullets faster than maintankhard. 
+ * Player can only stay supertank for 5 seconds
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li
+ * @01/15/24
  */
 public class Supertankhard extends Actor
 {

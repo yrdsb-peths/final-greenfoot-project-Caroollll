@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MainTank here.
+ * player controls maintank in easy world
+ * main tank can move and shoot. Maintank also has 3 lives.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li 
+ * @01/15/24
  */
 public class MainTank extends Actor
 {

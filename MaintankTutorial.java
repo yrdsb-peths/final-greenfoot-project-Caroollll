@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MaintankTutorial here.
+ * player controls maintanktutorial in tutorial world
+ * main tank can move and shoot. Maintank also has 3 lives.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li
+ * @01/15/24
  */
 public class MaintankTutorial extends Actor
 {
     /**
-     * Act - do whatever the MaintankTutorial wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * maintank moves up and down, and shoots 
      */
     public void act()
     {

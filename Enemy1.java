@@ -1,10 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemy1 here.
+ * enemy1 moves left and shoots bullets. If enemy1 reaches the end of
+ * of the screen, the game will be over.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li 
+ * @01/15/24
  */
 public class Enemy1 extends Actor
 {

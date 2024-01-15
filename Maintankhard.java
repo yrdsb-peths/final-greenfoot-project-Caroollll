@@ -1,23 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Maintankhard here.
+ * player controls maintankhard in hard world
+ * main tank can move and shoot. Maintank also has 3 lives.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li
+ * @01/15/24
  */
 public class Maintankhard extends Actor
 {
     /**
-     * Act - do whatever the Maintankhard wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * maintankhard moves up and down, shoots and dies when all HP is lost 
      */
     public void act()
     {
         checkKeyPressed();
         shoot();
         loseHP();
-    
     }
     
     /** 

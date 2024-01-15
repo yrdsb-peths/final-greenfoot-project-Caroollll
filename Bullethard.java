@@ -11,7 +11,8 @@ public class Bullethard extends Actor
     GreenfootSound explosion1 = new GreenfootSound("explosion1.wav");
     /**
      * checks if bullethard is touching enemy1, 2 and 3. If touching, 
-     * score increases, explosion animation, and removes enemies
+     * score increases, explosion animation plays, explode sound plays removes bullet and 
+     * removes enemies
      */
     public void act()
     {

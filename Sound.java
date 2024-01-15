@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Sound here.
+ * sound button actor
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li 
+ * @01/15/24
  */
 public class Sound extends Actor
 {
@@ -17,8 +17,6 @@ public class Sound extends Actor
         if(Greenfoot.mouseClicked(this)) {
             startStop();
         }
-        //is there a code to check what world i am in? then if true, 
-        //then mute the sound for that page only
     }
 
     /** 
@@ -28,7 +26,7 @@ public class Sound extends Actor
         startStop = !startStop;
         
         if(startStop) {
-            GreenfootImage mute = new GreenfootImage("images/mute.png");
+             GreenfootImage mute = new GreenfootImage("images/mute.png");
             setImage(mute);
             ((Titlepage) getWorld()).intromusic.pause();
         }

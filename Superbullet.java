@@ -1,16 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Superbullet here.
+ * the superbullet actor that supertankhard shoots in hard world
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li 
+ * @01/15/24
  */
 public class Superbullet extends Actor
 {
     /**
-     * Act - do whatever the Superbullet wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * checks if bullethard is touching enemy1, 2 and 3. If touching, 
+     * score increases, explosion animation plays, explode sound plays, 
+     * DOES NOT removes bullet(makes the button shoot all the enemies behind
+     * too and removes enemies
      */
     public void act()
     {
