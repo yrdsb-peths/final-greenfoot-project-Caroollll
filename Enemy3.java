@@ -27,11 +27,8 @@ public class Enemy3 extends Actor
         
         if(wait == 0)
             shoot();
-        //die();
-        
-        //MyWorld world = (MyWorld) getWorld();
+            
         if(getX() <= 0) {
-            //world.removeObject(this);
             removeTouching(Enemy3.class);
             Greenfoot.setWorld(new Gameover());
         }

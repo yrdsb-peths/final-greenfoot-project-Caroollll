@@ -18,6 +18,7 @@ public class Bullethard extends Actor
     {
         move(10);
         
+        //checking if bullethard is intersecting the enemy classes
         Enemy1 enemy1 = (Enemy1) getOneIntersectingObject(Enemy1.class);
         Enemy2 enemy2 = (Enemy2) getOneIntersectingObject(Enemy2.class);
         Enemy3 enemy3 = (Enemy3) getOneIntersectingObject(Enemy3.class);

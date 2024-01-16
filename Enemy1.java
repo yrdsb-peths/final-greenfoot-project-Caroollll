@@ -28,7 +28,6 @@ public class Enemy1 extends Actor
         
         if(wait == 0)
             shoot();
-        //die();
         
         if(getX() <= 0) {
             removeTouching(Enemy1.class);
@@ -53,16 +52,4 @@ public class Enemy1 extends Actor
         getWorld().addObject(bullet2, getX()-25, getY());
         wait = 200;
     }
-    
-    int enemy1HP = 20;
-    /**public void die() {
-        if(isTouching(Bullet.class)) {
-            enemy1HP--;
-            if(enemy1HP <0) {
-                removeTouching(Enemy1.class);
-                MyWorld world = (MyWorld) getWorld();
-                world.createEnemy1(); 
-            }
-        }
-    } **/
 }

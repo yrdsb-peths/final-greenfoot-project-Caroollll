@@ -37,7 +37,6 @@ public class Hardworld extends World
         Maintankhard maintankhard = new Maintankhard();
         addObject(maintankhard,50, getHeight()/2);
         
-        
         createEnemies();
 
         Explode explode = new Explode();
