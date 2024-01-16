@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Base here.
+ * Image of the base 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Carol Li ) 
+ * @version (01/15/24)
  */
 public class Base extends Actor
 {

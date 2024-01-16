@@ -1,16 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Replay here.
+ * replay button actor
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li 
+ * @01/15/24
  */
 public class Replay extends Actor
 {
     /**
-     * Act - do whatever the Replay wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * checks if the actor is pressed, and if pressed, change the world
+     * into difficulty page
+     * button also gets smaller, as if literally getting squished
      */
     public void act()
     {

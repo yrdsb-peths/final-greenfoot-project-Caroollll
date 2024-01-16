@@ -1,13 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * enemy1 moves left and shoots bullets. If enemy1 reaches the end of
- * of the screen, the game will be over.
+ * the acts the same as enemy1 but the game over world will not be switched
+ * when the enemy reaches the end of the screen.
  * 
  * @Carol Li 
  * @01/15/24
  */
-public class Enemy1 extends Actor
+public class Enemy1TUTORIAL extends Actor
 {
     int mSpeed = 1; //move speed
     int sSpeed = 1; //shoot speed
@@ -31,14 +31,14 @@ public class Enemy1 extends Actor
         //die();
         
         if(getX() <= 0) {
-            removeTouching(Enemy1.class);
-            Greenfoot.setWorld(new Gameover());
+            removeTouching(Enemy1TUTORIAL.class);
+            //Greenfoot.setWorld(new Gameover());
         }
     }
     /** 
      * enemy1 constructor 
      */
-    public Enemy1() {
+    public Enemy1TUTORIAL() {
         wait = 50;
         GreenfootImage enemy1 = new GreenfootImage("images/enemy1.png");
         enemy1.scale(55, 30);
@@ -59,7 +59,7 @@ public class Enemy1 extends Actor
         if(isTouching(Bullet.class)) {
             enemy1HP--;
             if(enemy1HP <0) {
-                removeTouching(Enemy1.class);
+                removeTouching(Enemy1TUTORIAL.class);
                 MyWorld world = (MyWorld) getWorld();
                 world.createEnemy1(); 
             }

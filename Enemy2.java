@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Enemy2 here.
+ * enemy2 does the same things as enemy1. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li 
+ * @01/15/24
  */
 public class Enemy2 extends Actor
 {

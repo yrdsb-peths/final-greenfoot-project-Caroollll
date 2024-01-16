@@ -1,21 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MaintankTutorial here.
+ * player controls maintanktutorial in tutorial world
+ * main tank can move and shoot. Maintank also has 3 lives.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li
+ * @01/15/24
  */
 public class MaintankTutorial extends Actor
 {
     /**
-     * Act - do whatever the MaintankTutorial wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * maintank moves up and down, and shoots 
      */
     public void act()
     {
         checkKeyPressed();
         shoot();
+        loseHP();
     
         if(isTouching(Bullet2.class)) {
             Warning warning = new Warning();
@@ -55,5 +56,21 @@ public class MaintankTutorial extends Actor
             
         }
         
+    }
+    
+    /** 
+     * maintank loses HP when it gets hit by the enemy bullets and dies when
+     * loses all it's HP.
+     * main tank has around 3-4 lives 
+     */
+    public void loseHP() {
+        if(isTouching(Bullet2.class)) {
+            int hp = ((Tutorial) getWorld()).health--;
+            ((Tutorial) getWorld()).healthScore.setValue(hp);
+            if(hp <= 0) {
+                Label uhoh = new Label("Uh oh, be careful, you are at negative health", 30);
+                ((Tutorial) getWorld()).addObject(uhoh, 295, 350);
+            }
+        }
     }
 }

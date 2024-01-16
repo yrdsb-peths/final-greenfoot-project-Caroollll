@@ -1,15 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Normalworld here.
+ * The game world of the normal version of tank wars. Spawns 2 different
+ * tanks randomly along the y-axis. When an enemy is shot, the score
+ * increases. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol
+ * @01/15/24
  */
 public class Normalworld extends World
 {
     public int score = 0;
-    public Label scoreLabel;
+    public Label scoreLabelnormal;
+    public int health = 50;
+    public Label healthScore;
     GreenfootSound gamesound2 = new GreenfootSound("gamesound3.mp3");
     /**
      * Constructor for objects of class Normalworld.
@@ -18,8 +22,17 @@ public class Normalworld extends World
     public Normalworld()
     {    
         super(650, 500, 1, false); 
-        scoreLabel = new Label(0, 80);
-        addObject(scoreLabel, 50, 50);
+        scoreLabelnormal = new Label(0, 30);
+        addObject(scoreLabelnormal, 95, 20);
+        addObject(new Label("Score:", 25), 50, 20);
+        
+        addObject(new Label("Health:", 25), 190, 20);
+        healthScore = new Label(0, 30);
+        addObject(healthScore, 235, 20);
+        healthScore.setValue(health);
+        
+        Base base = new Base();
+        addObject(base, -10, getHeight()/2);
         
         Maintanknormal maintanknormal = new Maintanknormal();
         addObject(maintanknormal,50, getHeight()/2);
@@ -33,8 +46,8 @@ public class Normalworld extends World
     }
     
     /** 
-     * myworld adds an enemy1 everytime a random number is less than 3
-     * myworld adds an enemy2 everytime a random number is less than 2
+     * normalworld adds an enemy1 everytime a random number is less than 3
+     * adds an enemy2 everytime a random number is less than 2
      */
     public void act() {
         if(Greenfoot.getRandomNumber(500) < 3) {
@@ -65,7 +78,7 @@ public class Normalworld extends World
      */
     public void increaseScore() {
         score++;
-        scoreLabel.setValue(score);
+        scoreLabelnormal.setValue(score);
         
     }
 }

@@ -1,10 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Difficultypage here.
+ * Player can choose between playing three different levels, when
+ * the button actors are clicked, they are brought to the world they 
+ * choose. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol
+ * @01/15/24
  */
 public class Difficultypage extends World
 {
@@ -34,6 +36,9 @@ public class Difficultypage extends World
         
         Hardbutton hardbutton = new Hardbutton();
         addObject(hardbutton, getWidth()/2, 370);
+        
+        Home home = new Home();
+        addObject(home, 35, 450);
         
         difficultysound.setVolume(40);
         difficultysound.play();

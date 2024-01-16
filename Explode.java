@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Explode here.
+ * animation of the explosion used for maintank
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol Li 
+ * @01/15/24
  */
 public class Explode extends Actor
 {
@@ -12,8 +12,7 @@ public class Explode extends Actor
     SimpleTimer animationTimer = new SimpleTimer();
     GreenfootImage explode = new GreenfootImage("images/explode/explode0.png");
     /**
-     * Act - do whatever the Explode wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * keep changing the animation image until it reaches the end
      */
     public void act()
     {
@@ -21,6 +20,9 @@ public class Explode extends Actor
            explosion();
     }
     
+    /** 
+     * constructor for expode 
+     */
     public Explode() {
         for(int i = 0; i< explosion.length; i++) 
         {
@@ -34,6 +36,9 @@ public class Explode extends Actor
         
     }
     
+    /** 
+     * 
+     */
     int imageIndex = 0;
     public void explosion() {
         if(animationTimer.millisElapsed() < 90)

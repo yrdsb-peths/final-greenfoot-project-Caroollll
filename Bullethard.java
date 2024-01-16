@@ -1,17 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bullethard here.
+ * the bullet actor that maintankhard shoots in hardworld
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Carol
+ * @01/15/24
  */
 public class Bullethard extends Actor
 {
     GreenfootSound explosion1 = new GreenfootSound("explosion1.wav");
     /**
-     * Act - do whatever the Bullethard wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * checks if bullethard is touching enemy1, 2 and 3. If touching, 
+     * score increases, explosion animation plays, explode sound plays removes bullet and 
+     * removes enemies
      */
     public void act()
     {

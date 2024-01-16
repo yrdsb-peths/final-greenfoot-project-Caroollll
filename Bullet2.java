@@ -1,22 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Bullet2 here.
+ * The bullet that all enemies shoot
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ *@Carol
+ * @01/15/24
  */
 public class Bullet2 extends Actor
 {
     /**
-     * Act - do whatever the Bullet2 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * the bullet continuously moves 5 to the left
      */
     public void act()
     {
         setLocation(getX() -5, getY());
     }
     
+    /** 
+     * bullet2 constructor
+     */
     public Bullet2() {
         GreenfootImage bullet2 = new GreenfootImage("images/bullet2.png");
         setImage(bullet2);

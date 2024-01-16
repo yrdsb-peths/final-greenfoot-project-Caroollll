@@ -1,15 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * warning image actor
+ * powerup actor for tutorial page
  * 
- * @Carol Li 
- * @01/15/24
+ * @carol
  */
-public class Warning extends Actor
+public class PowerupActor extends Actor
 {
     /**
-     * Act - do whatever the Warning wants to do. This method is called whenever
+     * Act - do whatever the PowerupActor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
