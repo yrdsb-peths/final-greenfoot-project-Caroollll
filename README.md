@@ -1,8 +1,6 @@
 # Final Greenfoot Project
 This is the README.md file.
 
-Consider using **Markdown** syntax to format the text in this file. [Markdown basics](https://www.markdownguide.org/getting-started/)
-
 ## Tank Wars Game rules
 - Protect your base by **shooting bullets(press space)** at incoming enemies! Prepare to dodge enemy bullets by using the **up and down key**. 
 - Player tank has a health level of 50 and it will be depleted when hit, so make sure to stay alive!
