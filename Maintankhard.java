@@ -55,13 +55,13 @@ public class Maintankhard extends Actor
     /** 
      * maintank loses HP when it gets hit by the enemy bullets and dies when
      * loses all it's HP.
-     * main tank has 3 lives 
+     * main tank has around 3-4 lives 
      */
-    int totalHP = 50;
     public void loseHP() {
         if(isTouching(Bullet2.class)) {
-            totalHP--;
-            if(totalHP < 0) {
+            int hp = ((Hardworld) getWorld()).health--;
+            ((Hardworld) getWorld()).healthScore.setValue(hp);
+            if(hp <= 0) {
                 World world = new Gameover();
                 Greenfoot.setWorld(world);
             }

@@ -16,6 +16,7 @@ public class MaintankTutorial extends Actor
     {
         checkKeyPressed();
         shoot();
+        loseHP();
     
         if(isTouching(Bullet2.class)) {
             Warning warning = new Warning();
@@ -55,5 +56,21 @@ public class MaintankTutorial extends Actor
             
         }
         
+    }
+    
+    /** 
+     * maintank loses HP when it gets hit by the enemy bullets and dies when
+     * loses all it's HP.
+     * main tank has around 3-4 lives 
+     */
+    public void loseHP() {
+        if(isTouching(Bullet2.class)) {
+            int hp = ((Tutorial) getWorld()).health--;
+            ((Tutorial) getWorld()).healthScore.setValue(hp);
+            if(hp <= 0) {
+                Label uhoh = new Label("Uh oh, be careful, you are at negative health", 30);
+                ((Tutorial) getWorld()).addObject(uhoh, 295, 350);
+            }
+        }
     }
 }

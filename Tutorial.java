@@ -10,7 +10,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Tutorial extends World
 {
     public int score = 0;
-    public Label scoreLabel;
+    public Label scoreLabeltutorial;
+    public int health = 50;
+    public Label healthScore;
     /** 
      * tutorial adds an enemy1 everytime a random number is less than 1
      */
@@ -40,10 +42,16 @@ public class Tutorial extends World
         Home home = new Home();
         addObject(home, getWidth()/2, 400);
         Label basewarning = new Label("\u2190 Don't let enemies reach your base!", 38);
-        addObject(basewarning, 280, 450);
+        addObject(basewarning, 280, 460);
         
-        scoreLabel = new Label(0, 80);
-        addObject(scoreLabel, 50, 50);
+        scoreLabeltutorial = new Label(0, 30);
+        addObject(scoreLabeltutorial, 95, 20);
+        addObject(new Label("Score:", 25), 50, 20);
+        
+        addObject(new Label("Health:", 25), 190, 20);
+        healthScore = new Label(0, 30);
+        addObject(healthScore, 235,20);
+        healthScore.setValue(health);
         
         MaintankTutorial maintanktutorial = new MaintankTutorial();
         addObject(maintanktutorial,50, getHeight()/2);
@@ -54,6 +62,11 @@ public class Tutorial extends World
         Enemy1TUTORIAL enemy1tutorial = new Enemy1TUTORIAL();
         addObject(enemy1tutorial, 600, getHeight()/2);
         
+        PowerupActor powerup = new PowerupActor();
+        addObject(powerup, 420, 400);
+        addObject(new Label("= powerup!", 30), 500, 400);
+        addObject(new Label("(only in Hard)", 25), 490, 425);
+        
         Explode explode = new Explode();
     }
     
@@ -62,7 +75,7 @@ public class Tutorial extends World
      */
     public void increaseScore() {
         score++;
-        scoreLabel.setValue(score);
+        scoreLabeltutorial.setValue(score);
         
     }
 }

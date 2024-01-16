@@ -11,7 +11,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Normalworld extends World
 {
     public int score = 0;
-    public Label scoreLabel;
+    public Label scoreLabelnormal;
+    public int health = 50;
+    public Label healthScore;
     GreenfootSound gamesound2 = new GreenfootSound("gamesound3.mp3");
     /**
      * Constructor for objects of class Normalworld.
@@ -20,8 +22,14 @@ public class Normalworld extends World
     public Normalworld()
     {    
         super(650, 500, 1, false); 
-        scoreLabel = new Label(0, 80);
-        addObject(scoreLabel, 50, 50);
+        scoreLabelnormal = new Label(0, 30);
+        addObject(scoreLabelnormal, 95, 20);
+        addObject(new Label("Score:", 25), 50, 20);
+        
+        addObject(new Label("Health:", 25), 190, 20);
+        healthScore = new Label(0, 30);
+        addObject(healthScore, 235, 20);
+        healthScore.setValue(health);
         
         Base base = new Base();
         addObject(base, -10, getHeight()/2);
@@ -70,7 +78,7 @@ public class Normalworld extends World
      */
     public void increaseScore() {
         score++;
-        scoreLabel.setValue(score);
+        scoreLabelnormal.setValue(score);
         
     }
 }

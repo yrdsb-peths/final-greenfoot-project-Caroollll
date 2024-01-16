@@ -11,7 +11,8 @@ public class MyWorld extends World
 {
     public int score = 0;
     public Label scoreLabel;
-    int level = 1;
+    public int health = 50;
+    public Label healthScore;
     GreenfootSound gamesound1 = new GreenfootSound("gamesound4.mp3");
     /** 
      * myworld adds an enemy1 everytime a random number is less than 3
@@ -30,8 +31,14 @@ public class MyWorld extends World
     {    
         super(650, 500, 1, false);
         
-        scoreLabel = new Label(0, 80);
-        addObject(scoreLabel, 50, 50);
+        scoreLabel = new Label(0, 30);
+        addObject(scoreLabel, 95, 20);
+        addObject(new Label("Score:", 25), 50, 20);
+        
+        addObject(new Label("Health:", 25), 190, 20);
+        healthScore = new Label(0,30);
+        addObject(healthScore, 235, 20);
+        healthScore.setValue(health);
         
         Base base = new Base();
         addObject(base, -10, getHeight()/2);

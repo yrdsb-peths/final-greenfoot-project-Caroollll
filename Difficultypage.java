@@ -37,6 +37,9 @@ public class Difficultypage extends World
         Hardbutton hardbutton = new Hardbutton();
         addObject(hardbutton, getWidth()/2, 370);
         
+        Home home = new Home();
+        addObject(home, 35, 450);
+        
         difficultysound.setVolume(40);
         difficultysound.play();
     }

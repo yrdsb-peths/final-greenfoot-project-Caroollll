@@ -11,7 +11,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Hardworld extends World
 {
     public int score = 0;
-    public Label scoreLabel;
+    public Label scoreLabelhard;
+    public int health = 50;
+    public Label healthScore;
     GreenfootSound gamesound3 = new GreenfootSound("gamesound1.mp3");
     /**
      * Constructor for objects of class Hardworld.
@@ -20,14 +22,21 @@ public class Hardworld extends World
     public Hardworld()
     {    
         super(650, 500, 1, false); 
-        scoreLabel = new Label(0, 80);
-        addObject(scoreLabel, 50, 50);
+        scoreLabelhard = new Label(0, 30);
+        addObject(scoreLabelhard, 95, 20);
+        addObject(new Label("Score:", 25), 50, 20);
+        
+        addObject(new Label("Health:", 25), 190, 20);
+        healthScore = new Label(0, 30);
+        addObject(healthScore, 235,20);
+        healthScore.setValue(health);
         
         Base base = new Base();
         addObject(base, -10, getHeight()/2);
         
         Maintankhard maintankhard = new Maintankhard();
         addObject(maintankhard,50, getHeight()/2);
+        
         
         createEnemies();
 
@@ -91,7 +100,6 @@ public class Hardworld extends World
      */
     public void increaseScore() {
         score++;
-        scoreLabel.setValue(score);
-        
+        scoreLabelhard.setValue(score);
     }
 }
