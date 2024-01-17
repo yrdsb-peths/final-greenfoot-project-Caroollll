@@ -13,3 +13,7 @@ This is the README.md file.
 3. Please press 'Tutorial' button first to learn about the rules. When done press the home screen button.
 4. Press 'Difficulty' button to select the difficulty of the game. Then the game should start.
 5. Have fun playing Tank Wars!
+
+## Tutorial page perks
+- If player tank gets shot be the enemy bullet, a text will appear on the screen, make sure to read it!
+- When player tank's health reaches less than 0(health score is on the top left side), a text will appear on the screen.
