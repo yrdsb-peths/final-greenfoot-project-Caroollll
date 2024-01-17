@@ -17,3 +17,16 @@ This is the README.md file.
 ## Tutorial page perks
 - If player tank gets shot be the enemy bullet, a text will appear on the screen, make sure to read it!
 - When player tank's health reaches less than 0(health score is on the top left side), a text will appear on the screen.
+
+  ## Game Credits
+  Tank designs:
+  https://free-game-assets.itch.io/free-2d-tank-game-assets
+  https://ragewortt.itch.io/top-down-sci-fi-tanks
+
+  Game music: (all the sounds I used are from this website)
+  https://pixabay.com/music/search/powerful/
+  https://pixabay.com/music/search/peaceful/
+  https://pixabay.com/music/search/calm%20before%20the%20storm/
+
+  Titlepage:
+  https://www.pinterest.ca/pin/773634042224212487/
